@@ -57,7 +57,7 @@ export async function createPrompt(data: CreatePromptRequest): Promise<boolean> 
 }
 
 function createBaseUrl(): string {
-  const API_BASE_URL = 'http://localhost:8080';
+  const API_BASE_URL = process.env.API_BASE_URL;
   return `${API_BASE_URL}/admin/prompts`;
 }
 
