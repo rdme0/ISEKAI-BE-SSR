@@ -1,0 +1,37 @@
+.promptsTable {
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+  inset 0 0 1px rgba(255, 255, 255, 0.4);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /*width: 75%;*/
+  min-width: 375px;
+  border-collapse: collapse; /* Ensures borders and backgrounds work well together */
+}
+
+.promptsTable:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25),
+  inset 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.promptsTable * {
+  padding: 0.25rem 0.6rem 0.25rem 0.6rem;
+}
+
+.promptsTable tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.promptsTable tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

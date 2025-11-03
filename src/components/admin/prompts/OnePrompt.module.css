@@ -1,0 +1,116 @@
+.promptDetailTableContainer {
+  width: 80%
+}
+
+.promptDetailTable {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+  inset 0 0 1px rgba(255, 255, 255, 0.4);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.promptDetailTable:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25),
+  inset 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.promptDetailTable * {
+  padding: 0.25rem 0.6rem 0.25rem 0.6rem;
+}
+
+.buttonContainer {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+  inset 0 0 1px rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: left;
+
+  border-radius: 100rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.buttonContainer * {
+  border: none;
+}
+
+.bottomButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.actionButton {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 0 0.4rem; /* Add margin for spacing */
+}
+
+.actionButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.actionButton:active {
+  transform: translateY(0);
+}
+
+.inputField, .textareaField {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #333;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: NanumSquareNeo, serif;
+}
+
+.inputField:focus, .textareaField:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 5px rgba(255, 255, 255, 0.4);
+  font-family: NanumSquareNeo, serif;
+}
+
+.textareaField {
+  min-height: 500px;
+  resize: vertical;
+}
+
+.contentCellView {
+  max-height: 250px; /* Same as textarea min-height for consistency */
+  overflow-y: auto;
+  white-space: pre-wrap; /* Respects newlines and wraps text */
+  word-break: break-word;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}

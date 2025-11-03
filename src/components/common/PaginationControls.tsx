@@ -21,23 +21,28 @@ export default function PaginationControls(
 
   return (
       <div className={styles.paginationControlsContainer}>
-        <button className={styles.paginationPreviousButton}
+        <button className={styles.paginationSideButton}
                 onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage <= 1}>
-          이전
+          {'<'}
         </button>
 
-        <div>
+        <div className={styles.pageNumberContainer}>
           {
             getPageRange(currentPage, totalPages).map((page, index) => (
-                <button key={index} onClick={() => handlePageChange(page)}>{page}</button>
+                <button
+                    key={index}
+                    onClick={() => handlePageChange(page)}
+                    className={page === currentPage ? styles.currentPageButton : styles.pageButton}>
+                  {page}
+                </button>
             ))
           }
         </div>
 
-        <button className={styles.paginationPreviousButton}
+        <button className={styles.paginationSideButton}
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage >= totalPages}>
-          다음
+          {'>'}
         </button>
       </div>
   );
